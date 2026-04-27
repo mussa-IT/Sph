@@ -1,44 +1,5 @@
 {
   "version": 2,
-  "name": "sph",
-  "builds": [
-    {
-      "src": "artisan",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public/build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/index.php"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.php"
-    }
-  ],
-  "env": {
-    "APP_ENV": "production",
-    "APP_DEBUG": "false",
-    "APP_KEY": "@app_key",
-    "APP_URL": "@url",
-    "DB_CONNECTION": "sqlite",
-    "DB_DATABASE": "/tmp/database.sqlite",
-    "CACHE_DRIVER": "array",
-    "SESSION_DRIVER": "cookie",
-    "QUEUE_CONNECTION": "sync",
-    "MAIL_MAILER": "array"
-  },
-  "functions": {
-    "artisan": {
-      "maxDuration": 30
-    }
-  }
+  "outputDirectory": "public",
+  "framework": null
 }

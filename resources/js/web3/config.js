@@ -117,3 +117,45 @@ export const SUPPORTED_WALLETS = {
     icon: '🔵'
   }
 };
+
+export const switchToBaseSepolia = async () => {
+  if (typeof window.ethereum !== 'undefined') {
+    try {
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: '0x14a34' }], // Base Sepolia chainId in hex
+      });
+    } catch (switchError) {
+      // This error code indicates that the chain has not been added to MetaMask
+      if (switchError.code === 4902) {
+        try {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {
+                chainId: '0x14a34',
+                chainName: 'Base Sepolia',
+                nativeCurrency: {
+                  name: 'ETH',
+                  symbol: 'ETH',
+                  decimals: 18,
+                },
+                rpcUrls: ['https://sepolia.base.org'],
+                blockExplorerUrls: ['https://sepolia.basescan.org'],
+              },
+            ],
+          });
+        } catch (addError) {
+          console.error('Failed to add Base Sepolia network:', addError);
+        }
+      } else {
+        console.error('Failed to switch to Base Sepolia:', switchError);
+      }
+    }
+  }
+};
+
+export const formatAddress = (address) => {
+  if (!address) return '';
+  return `${address.slice(0, 6)}...${address.slice(-4)}`;
+};
