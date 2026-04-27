@@ -15,7 +15,6 @@ export default defineConfig({
     build: {
         target: 'es2018',
         minify: 'esbuild',
-        cssCodeSplit: true,
         sourcemap: false,
         rollupOptions: {
             output: {
@@ -28,7 +27,9 @@ export default defineConfig({
         },
     },
     optimizeDeps: {
-        include: ['chart.js', 'wagmi', 'viem', '@wagmi/core', '@wagmi/connectors', '@tanstack/react-query', 'ethers'],
+        rolldownOptions: {
+            include: ['chart.js', 'wagmi', 'viem', '@wagmi/core', '@wagmi/connectors', '@tanstack/react-query', 'ethers'],
+        },
     },
     server: {
         watch: {

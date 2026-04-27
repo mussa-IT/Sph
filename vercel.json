@@ -1,5 +1,6 @@
 {
   "version": 2,
   "outputDirectory": "public",
-  "framework": null
+  "installCommand": "npm install --legacy-peer-deps --force",
+  "buildCommand": "npm run build"
 }
