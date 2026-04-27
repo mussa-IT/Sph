@@ -1,0 +1,30 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->boolean('compact_mode')->default(false)->after('theme_preference');
+            $table->boolean('comfortable_spacing')->default(false)->after('compact_mode');
+            $table->boolean('sidebar_collapsed_default')->default(false)->after('comfortable_spacing');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn(['compact_mode', 'comfortable_spacing', 'sidebar_collapsed_default']);
+        });
+    }
+};
