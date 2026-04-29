@@ -1,0 +1,103 @@
+/* FORCE PURPLE & BLUE THEME - AGGRESSIVE OVERRIDE */
+/* Override ALL white backgrounds */
+.bg-white, 
+.bg-gray-50, 
+.bg-gray-100, 
+.bg-slate-50,
+[class*="bg-white"],
+[class*="bg-gray-"],
+[class*="bg-slate-"] {
+    background-color: #7c3aed !important;
+    background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #1e40af 100%) !important;
+}
+
+/* Override ALL text colors */
+.text-white,
+.text-gray-900,
+.text-slate-900,
+[class*="text-white"],
+[class*="text-gray-"],
+[class*="text-slate-"] {
+    color: #ffffff !important;
+}
+
+/* Force purple/blue on ALL elements */
+body {
+    background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #1e40af 100%) !important;
+    color: #ffffff !important;
+}
+
+/* Override specific landing page elements */
+section {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(37, 99, 235, 0.1) 50%, rgba(30, 64, 175, 0.1) 100%) !important;
+}
+
+.hero-section,
+[class*="hero"] {
+    background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #1e40af 100%) !important;
+}
+
+/* Force gradients to use purple/blue */
+.bg-gradient-to-br {
+    background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #1e40af 100%) !important;
+}
+
+.bg-gradient-to-r {
+    background: linear-gradient(90deg, #7c3aed 0%, #2563eb 50%, #1e40af 100%) !important;
+}
+
+/* Override ALL Tailwind color utilities */
+[class*="from-violet-"] { --tw-gradient-from: #7c3aed !important; }
+[class*="via-blue-"] { --tw-gradient-stops: #7c3aed, #2563eb, #1e40af !important; }
+[class*="to-cyan-"] { --tw-gradient-to: #1e40af !important; }
+
+/* Dark mode overrides */
+.dark body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%) !important;
+}
+
+.dark section {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 50%, rgba(99, 102, 241, 0.15) 100%) !important;
+}
+
+/* Force card backgrounds */
+.card,
+.feature-card,
+.scroll-reveal {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%) !important;
+    border: 1px solid #7c3aed !important;
+}
+
+/* Force button colors */
+.btn,
+button,
+[class*="btn"] {
+    background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #1e40af 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid #7c3aed !important;
+}
+
+/* Override any remaining white */
+* {
+    border-color: #7c3aed !important;
+}
+
+div, span, p, h1, h2, h3, h4, h5, h6 {
+    color: inherit !important;
+}
+
+/* Ensure purple/blue is EVERYWHERE */
+html, body {
+    background: #7c3aed !important;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #1e40af 100%);
+    z-index: -1;
+}

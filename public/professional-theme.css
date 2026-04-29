@@ -1,0 +1,303 @@
+/* PROFESSIONAL THEME - Web Design Best Practices */
+:root {
+    /* Professional Color Palette */
+    --color-primary: #1e40af;        /* Dark Blue */
+    --color-secondary: #2563eb;      /* Blue */
+    --color-accent: #3b82f6;          /* Light Blue */
+    --color-purple: #7c3aed;         /* Purple for cards */
+    --color-light-blue: #60a5fa;      /* Light Blue for cards */
+    
+    /* Text Colors - High Contrast */
+    --text-primary: #1f2937;         /* Dark text for light backgrounds */
+    --text-secondary: #6b7280;       /* Medium gray */
+    --text-light: #ffffff;           /* White text for dark backgrounds */
+    --text-muted: #9ca3af;           /* Muted text */
+    
+    /* Background Colors */
+    --bg-white: #ffffff;             /* Clean white */
+    --bg-light: #f8fafc;             /* Light gray */
+    --bg-card: #ffffff;              /* Card backgrounds */
+    --bg-section: #f1f5f9;           /* Section backgrounds */
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+    color: var(--text-primary) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    line-height: 1.6 !important;
+}
+
+/* Professional Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+h1 { font-size: 2.5rem !important; }
+h2 { font-size: 2rem !important; }
+h3 { font-size: 1.5rem !important; }
+h4 { font-size: 1.25rem !important; }
+
+p, span, div {
+    color: var(--text-secondary) !important;
+}
+
+/* Professional Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%) !important;
+    color: var(--text-light) !important;
+    padding: 5rem 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.hero-section h1 {
+    color: var(--text-light) !important;
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.hero-section p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Professional Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%) !important;
+    color: var(--text-light) !important;
+    padding: 1rem 2rem !important;
+    border-radius: 0.5rem !important;
+    font-weight: 600 !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3) !important;
+}
+
+.btn-secondary {
+    background: transparent !important;
+    color: var(--text-light) !important;
+    padding: 1rem 2rem !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 0.5rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Professional Cards with Different Colors */
+.feature-card {
+    background: var(--bg-card) !important;
+    border-radius: 1rem !important;
+    padding: 2rem !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    margin-bottom: 2rem !important;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Different Card Colors */
+.card-purple {
+    background: linear-gradient(135deg, var(--color-purple) 0%, #8b5cf6 100%) !important;
+    color: var(--text-light) !important;
+}
+
+.card-purple h3,
+.card-purple p,
+.card-purple div {
+    color: var(--text-light) !important;
+}
+
+.card-dark-blue {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%) !important;
+    color: var(--text-light) !important;
+}
+
+.card-dark-blue h3,
+.card-dark-blue p,
+.card-dark-blue div {
+    color: var(--text-light) !important;
+}
+
+.card-light-blue {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-light-blue) 100%) !important;
+    color: var(--text-light) !important;
+}
+
+.card-light-blue h3,
+.card-light-blue p,
+.card-light-blue div {
+    color: var(--text-light) !important;
+}
+
+.card-white {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+}
+
+.card-white h3 {
+    color: var(--color-primary) !important;
+}
+
+/* Professional Sections */
+section {
+    padding: 4rem 0 !important;
+    background: var(--bg-section) !important;
+}
+
+section:nth-child(even) {
+    background: var(--bg-white) !important;
+}
+
+/* Professional Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    padding: 1rem 0 !important;
+}
+
+.navbar a {
+    color: var(--text-primary) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.25rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar a:hover {
+    background: var(--bg-light) !important;
+    color: var(--color-primary) !important;
+}
+
+/* Professional Footer */
+footer {
+    background: var(--text-primary) !important;
+    color: var(--text-light) !important;
+    padding: 3rem 0 !important;
+}
+
+footer h3,
+footer p,
+footer a {
+    color: var(--text-light) !important;
+}
+
+/* Fix Text Visibility Issues */
+.text-foreground,
+.text-dark,
+[class*="text-"] {
+    color: var(--text-primary) !important;
+}
+
+.bg-background,
+.bg-white,
+[class*="bg-white"] {
+    background: var(--bg-white) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Professional Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.6s ease-out !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    .hero-section { padding: 3rem 0 !important; }
+    .feature-card { padding: 1.5rem !important; }
+}
+
+/* Dark Mode Support */
+.dark body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+    color: var(--text-light) !important;
+}
+
+.dark .feature-card {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark section {
+    background: rgba(15, 23, 42, 0.5) !important;
+}
+
+.dark section:nth-child(even) {
+    background: rgba(30, 41, 59, 0.5) !important;
+}
+
+/* Ensure Good Contrast Ratios */
+.text-on-dark {
+    color: var(--text-light) !important;
+}
+
+.text-on-light {
+    color: var(--text-primary) !important;
+}
+
+/* Professional Spacing */
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+}
+
+/* Professional Grid */
+.grid {
+    display: grid !important;
+    gap: 2rem !important;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+@media (max-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+}

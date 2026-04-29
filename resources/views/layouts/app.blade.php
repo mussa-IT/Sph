@@ -59,7 +59,10 @@
         {!! seo_structured_data('softwareapplication') !!}
         </script>
 
-        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/web3/Web3App.jsx'])
+        <link href="{{ asset('app-styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('dark-blue-theme.css') }}" rel="stylesheet">
+        {{-- Temporarily disabled Vite while fixing dependency issues --}}
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/web3/Web3App.jsx']) --}}
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -93,11 +96,11 @@
             @include('components.navbar')
 
             <div class="flex-1">
-                <div class="mx-auto grid h-full max-w-7xl grid-cols-1 gap-4 px-3 py-3 sm:px-4 sm:py-4 sm:gap-6 md:px-6 md:py-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:px-8 lg:py-8 lg:gap-8">
-                    <aside class="hidden lg:block order-2 lg:order-1">
+                <div class="mx-auto grid h-full max-w-7xl grid-cols-1 gap-4 px-3 py-3 sm:px-4 sm:py-4 sm:gap-6 md:px-6 md:py-6 lg-grid-sidebar lg:px-8 lg:py-8 lg:gap-8">
+                    <aside class="hidden lg-block order-2 lg:order-1">
                         <x-sidebar />
                     </aside>
-                    <!-- Mobile sidebar portal -->
+                    
                     <div class="lg:hidden fixed inset-0 z-40 hidden" id="mobile-sidebar-portal">
                         <x-sidebar />
                     </div>
@@ -136,7 +139,8 @@
         </div>
 
         {{-- Premium Wow Factor Features --}}
-        <x-command-palette />
         <x-keyboard-shortcuts />
+        <x-toast />
+        <x-floating-action-button />
     </body>
 </html>

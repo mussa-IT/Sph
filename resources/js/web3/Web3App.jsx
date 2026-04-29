@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider } from 'wagmi';
 import { wagmiConfig } from './wagmi.js';
 import WalletConnect from './WalletConnect.jsx';
+import ProjectPublisher from './ProjectPublisher.jsx';
 
 // Create a client
 const queryClient = new QueryClient();
@@ -38,4 +39,11 @@ if (document.readyState === 'loading') {
 }
 
 // Export for manual initialization if needed
-export { initWeb3, Web3App };
+export { initWeb3, Web3App, ProjectPublisher };
+
+// Make available globally for Blade templates
+if (typeof window !== 'undefined') {
+  window.React = React;
+  window.ReactDOM = { createRoot };
+  window.ProjectPublisher = ProjectPublisher;
+}

@@ -1,0 +1,267 @@
+/* COMPREHENSIVE TEXT VISIBILITY FIX */
+/* Force ALL text to be visible with proper contrast */
+
+/* Universal Text Visibility Fix */
+* {
+    color: inherit !important;
+}
+
+/* Dark Background Text - White/Light */
+.text-on-dark,
+.hero-section *,
+.card-purple *,
+.card-dark-blue *,
+.card-light-blue *,
+.btn-primary *,
+.btn-secondary *,
+[class*="text-white"],
+[class*="text-light"],
+.text-white,
+.text-light {
+    color: #ffffff !important;
+}
+
+/* Light Background Text - Dark */
+.text-on-light,
+.card-white *,
+section *,
+body *,
+.text-primary,
+.text-dark,
+.text-secondary,
+.text-muted,
+.text-gray,
+.text-slate,
+.text-foreground,
+[class*="text-gray"],
+[class*="text-slate"],
+[class*="text-foreground"] {
+    color: #1f2937 !important;
+}
+
+/* Headings - Always Dark on Light, Light on Dark */
+h1, h2, h3, h4, h5, h6 {
+    color: #1f2937 !important;
+}
+
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section h4,
+.hero-section h5,
+.hero-section h6,
+.card-purple h1,
+.card-purple h2,
+.card-purple h3,
+.card-purple h4,
+.card-purple h5,
+.card-purple h6,
+.card-dark-blue h1,
+.card-dark-blue h2,
+.card-dark-blue h3,
+.card-dark-blue h4,
+.card-dark-blue h5,
+.card-dark-blue h6,
+.card-light-blue h1,
+.card-light-blue h2,
+.card-light-blue h3,
+.card-light-blue h4,
+.card-light-blue h5,
+.card-light-blue h6 {
+    color: #ffffff !important;
+}
+
+/* Paragraphs and Body Text */
+p, span, div, li {
+    color: #4b5563 !important;
+}
+
+.hero-section p,
+.hero-section span,
+.hero-section div,
+.card-purple p,
+.card-purple span,
+.card-purple div,
+.card-dark-blue p,
+.card-dark-blue span,
+.card-dark-blue div,
+.card-light-blue p,
+.card-light-blue span,
+.card-light-blue div {
+    color: #ffffff !important;
+}
+
+/* Links and Interactive Elements */
+a {
+    color: #2563eb !important;
+}
+
+a:hover {
+    color: #1d4ed8 !important;
+}
+
+.hero-section a,
+.card-purple a,
+.card-dark-blue a,
+.card-light-blue a {
+    color: #ffffff !important;
+}
+
+/* Buttons */
+.btn-primary,
+button[type="submit"],
+[class*="btn-primary"] {
+    color: #ffffff !important;
+    background: #2563eb !important;
+}
+
+.btn-secondary,
+button[type="button"],
+[class*="btn-secondary"] {
+    color: #2563eb !important;
+    background: transparent !important;
+    border: 2px solid #2563eb !important;
+}
+
+/* Specific Element Fixes */
+.text-muted {
+    color: #6b7280 !important;
+}
+
+.text-muted-dark {
+    color: #9ca3af !important;
+}
+
+.hero-section .text-muted,
+.card-purple .text-muted,
+.card-dark-blue .text-muted,
+.card-light-blue .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Badge and Small Text */
+.badge,
+.text-xs,
+.text-sm {
+    color: #374151 !important;
+}
+
+.hero-section .badge,
+.hero-section .text-xs,
+.hero-section .text-sm,
+.card-purple .badge,
+.card-purple .text-xs,
+.card-purple .text-sm,
+.card-dark-blue .badge,
+.card-dark-blue .text-xs,
+.card-dark-blue .text-sm,
+.card-light-blue .badge,
+.card-light-blue .text-xs,
+.card-light-blue .text-sm {
+    color: #ffffff !important;
+}
+
+/* Form Elements */
+input, textarea, select {
+    color: #1f2937 !important;
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af !important;
+}
+
+/* Navigation */
+.navbar a,
+.nav-link {
+    color: #1f2937 !important;
+}
+
+.navbar a:hover,
+.nav-link:hover {
+    color: #2563eb !important;
+}
+
+/* Footer */
+footer,
+footer * {
+    color: #ffffff !important;
+}
+
+/* Dark Mode Overrides */
+.dark body,
+.dark section,
+.dark * {
+    color: #ffffff !important;
+}
+
+.dark .card-white *,
+.dark .text-on-light {
+    color: #1f2937 !important;
+}
+
+/* Force visibility for specific problematic classes */
+[class*="text-"],
+[class*="foreground"],
+[class*="muted"],
+.text-foreground,
+.text-foreground-dark,
+.text-muted-dark,
+.text-muted,
+.text-primary,
+.text-secondary {
+    color: #1f2937 !important;
+}
+
+.hero-section [class*="text-"],
+.hero-section [class*="foreground"],
+.hero-section [class*="muted"],
+.hero-section .text-foreground,
+.hero-section .text-foreground-dark,
+.hero-section .text-muted-dark,
+.hero-section .text-muted,
+.hero-section .text-primary,
+.hero-section .text-secondary {
+    color: #ffffff !important;
+}
+
+/* Emergency visibility fix - make everything visible */
+* {
+    text-shadow: none !important;
+}
+
+/* Ensure contrast for all text combinations */
+.bg-white *,
+.bg-light *,
+.bg-gray-50 *,
+.bg-gray-100 * {
+    color: #1f2937 !important;
+}
+
+.bg-dark *,
+.bg-gray-800 *,
+.bg-gray-900 *,
+[class*="bg-gray-800"] *,
+[class*="bg-gray-900"] * {
+    color: #ffffff !important;
+}
+
+/* Final override for any remaining invisible text */
+*:not(.hero-section *):not(.card-purple *):not(.card-dark-blue *):not(.card-light-blue *) {
+    color: #1f2937 !important;
+}
+
+/* White text on colored backgrounds */
+.hero-section *,
+.card-purple *,
+.card-dark-blue *,
+.card-light-blue *,
+.btn-primary *,
+.bg-gradient-to-br *,
+[class*="from-"] *,
+[class*="via-"] *,
+[class*="to-"] * {
+    color: #ffffff !important;
+}

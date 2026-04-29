@@ -99,9 +99,14 @@
 
                 <div id="chat-session-list" class="h-[42vh] space-y-5 overflow-y-auto pr-1 lg:h-[56vh]">
                     @if($chatSessions->isEmpty())
-                        <p class="rounded-2xl border border-dashed border-muted/30 px-4 py-6 text-sm text-muted dark:border-muted-dark/30 dark:text-muted-dark">
-                            No chats yet. Create one to start your first conversation.
-                        </p>
+                        <x-empty-state
+                            icon="💬"
+                            title="No chats yet"
+                            message="Start a conversation with AI to get help with your projects, tasks, and more."
+                            actionText="New Chat"
+                            actionHref="#"
+                            :showAction="false"
+                        />
                     @else
                         @foreach([
                             'Today' => $todaySessions,

@@ -1,0 +1,278 @@
+/* GREY BACKGROUND THEME - Full Page Grey with Visible Text & Icons */
+:root {
+    --grey-bg-primary: #f3f4f6;      /* Light grey background */
+    --grey-bg-secondary: #e5e7eb;    /* Medium grey */
+    --grey-bg-dark: #d1d5db;         /* Darker grey */
+    --text-dark: #1f2937;            /* Dark text for contrast */
+    --text-medium: #4b5563;          /* Medium text */
+    --text-light: #6b7280;           /* Light text */
+    --accent-blue: #2563eb;          /* Blue accent */
+    --accent-purple: #7c3aed;        /* Purple accent */
+}
+
+/* Full Page Grey Background */
+html, body {
+    background: #f3f4f6 !important;
+    background-color: #f3f4f6 !important;
+    background-image: none !important;
+}
+
+/* Override all previous backgrounds */
+* {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Main page background */
+body {
+    background: #f3f4f6 !important;
+    background-color: #f3f4f6 !important;
+}
+
+/* Section backgrounds */
+section {
+    background: #f3f4f6 !important;
+    background-color: #f3f4f6 !important;
+}
+
+/* Hero section with grey background */
+.hero-section {
+    background: linear-gradient(135deg, #4b5563 0%, #6b7280 100%) !important;
+    color: #ffffff !important;
+}
+
+/* Text visibility on grey background */
+h1, h2, h3, h4, h5, h6 {
+    color: #1f2937 !important;
+}
+
+p, span, div, li {
+    color: #4b5563 !important;
+}
+
+/* Hero section text */
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section h4,
+.hero-section h5,
+.hero-section h6,
+.hero-section p,
+.hero-section span,
+.hero-section div {
+    color: #ffffff !important;
+}
+
+/* Card backgrounds for grey theme */
+.feature-card {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.feature-card h3 {
+    color: #1f2937 !important;
+}
+
+.feature-card p {
+    color: #4b5563 !important;
+}
+
+/* Colored cards with proper text visibility */
+.card-purple {
+    background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%) !important;
+    color: #ffffff !important;
+}
+
+.card-purple h3,
+.card-purple p,
+.card-purple div,
+.card-purple span {
+    color: #ffffff !important;
+}
+
+.card-dark-blue {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
+    color: #ffffff !important;
+}
+
+.card-dark-blue h3,
+.card-dark-blue p,
+.card-dark-blue div,
+.card-dark-blue span {
+    color: #ffffff !important;
+}
+
+.card-light-blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%) !important;
+    color: #ffffff !important;
+}
+
+.card-light-blue h3,
+.card-light-blue p,
+.card-light-blue div,
+.card-light-blue span {
+    color: #ffffff !important;
+}
+
+.card-white {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+.card-white h3 {
+    color: #1f2937 !important;
+}
+
+.card-white p {
+    color: #4b5563 !important;
+}
+
+/* Icons visibility */
+.feature-icon,
+[class*="icon"],
+[class*="emoji"] {
+    color: inherit !important;
+    opacity: 1 !important;
+}
+
+/* Colored card icons */
+.card-purple .feature-icon,
+.card-dark-blue .feature-icon,
+.card-light-blue .feature-icon {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+/* White card icons */
+.card-white .feature-icon {
+    background: #f3f4f6 !important;
+    color: #1f2937 !important;
+}
+
+/* Buttons with grey theme */
+.btn-primary {
+    background: #2563eb !important;
+    color: #ffffff !important;
+}
+
+.btn-secondary {
+    background: transparent !important;
+    color: #1f2937 !important;
+    border: 2px solid #1f2937 !important;
+}
+
+/* Hero buttons */
+.hero-section .btn-primary {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+.hero-section .btn-secondary {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* Navigation */
+.navbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e5e7eb !important;
+}
+
+.navbar a {
+    color: #1f2937 !important;
+}
+
+.navbar a:hover {
+    color: #2563eb !important;
+}
+
+/* Footer */
+footer {
+    background: #1f2937 !important;
+    color: #ffffff !important;
+}
+
+footer * {
+    color: #ffffff !important;
+}
+
+/* Step numbers */
+[class*="step"] .flex {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%) !important;
+    color: #ffffff !important;
+}
+
+/* Override any gradient backgrounds */
+.bg-gradient-to-br,
+.bg-gradient-to-r,
+[class*="bg-gradient"] {
+    background: #f3f4f6 !important;
+}
+
+/* Keep hero gradient */
+.hero-section.bg-gradient-to-br {
+    background: linear-gradient(135deg, #4b5563 0%, #6b7280 100%) !important;
+}
+
+/* Ensure all text is visible */
+.text-foreground,
+.text-primary,
+.text-secondary,
+.text-muted {
+    color: #1f2937 !important;
+}
+
+.hero-section .text-foreground,
+.hero-section .text-primary,
+.hero-section .text-secondary,
+.hero-section .text-muted {
+    color: #ffffff !important;
+}
+
+/* Icons and emojis */
+.emoji,
+[class*="🤖"],
+[class*="🛠️"],
+[class*="💰"],
+[class*="📚"],
+[class*="✅"],
+[class*="📊"] {
+    color: inherit !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* Card icons visibility */
+.feature-icon {
+    opacity: 1 !important;
+    color: inherit !important;
+}
+
+/* Emergency visibility fix */
+* {
+    text-shadow: none !important;
+}
+
+/* Dark mode support */
+.dark body {
+    background: #1f2937 !important;
+}
+
+.dark section {
+    background: #1f2937 !important;
+}
+
+.dark .feature-card {
+    background: #374151 !important;
+    border: 1px solid #4b5563 !important;
+}
+
+.dark .feature-card h3 {
+    color: #ffffff !important;
+}
+
+.dark .feature-card p {
+    color: #d1d5db !important;
+}

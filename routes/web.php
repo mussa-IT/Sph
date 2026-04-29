@@ -29,6 +29,8 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\BlueprintController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -72,9 +74,8 @@ Route::middleware('auth')->group(function () {
         Route::patch('users/{user}/suspend', [AdminController::class, 'suspendUser'])->name('users.suspend');
     });
 
-    Route::get('/dashboard', function () {
-        return view('pages.dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard/stats', [DashboardController::class, 'apiStats'])->name('dashboard.stats');
 
     Route::resource('projects', ProjectController::class);
     Route::resource('tasks', TaskController::class);
@@ -103,6 +104,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/resources', function () {
         return view('pages.resources');
     })->name('resources');
+
+    Route::get('/api-docs', function () {
+        return view('pages.api-docs');
+    })->name('api-docs');
+
+    Route::get('/integrations', function () {
+        return view('pages.integrations');
+    })->name('integrations');
 
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
 
@@ -176,9 +185,22 @@ Route::middleware('auth')->group(function () {
 
     // Web3 Routes
     Route::get('/web3/profile', [Web3Controller::class, 'profile'])->name('web3.profile');
-    Route::post('/test-notification', [PWAController::class, 'testNotification'])->name('test_notification')->middleware('auth');
+    Route::get('/web3/verification', [Web3Controller::class, 'verification'])->name('web3.verification');
     Route::post('/web3/verify', [Web3Controller::class, 'verifyProject'])->name('web3.verify');
     Route::post('/web3/projects/{project}/publish', [Web3Controller::class, 'publishProject'])->name('web3.projects.publish');
+
+    // Blueprint routes
+    Route::get('/blueprints', [BlueprintController::class, 'index'])->name('blueprints.index');
+    Route::post('/blueprints', [BlueprintController::class, 'store'])->name('blueprints.store');
+    Route::get('/blueprints/{blueprint}', [BlueprintController::class, 'show'])->name('blueprints.show');
+    Route::post('/blueprints/{blueprint}/anchor', [BlueprintController::class, 'anchorOnchain'])->name('blueprints.anchor');
+    Route::delete('/blueprints/{blueprint}', [BlueprintController::class, 'destroy'])->name('blueprints.destroy');
+    Route::post('/blueprints/verify', [BlueprintController::class, 'verify'])->name('blueprints.verify');
+
+    // Bounty routes
+    Route::get('/bounties', function () {
+        return view('pages.bounties');
+    })->name('bounties.index');
 
     // Subscription Routes
     Route::prefix('subscription')->name('subscription.')->group(function () {

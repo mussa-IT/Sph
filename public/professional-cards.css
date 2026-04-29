@@ -1,0 +1,317 @@
+/* PROFESSIONAL CARD DESIGN ENHANCEMENT */
+:root {
+    --card-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --card-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --card-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.08);
+    --card-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.1);
+    --card-border-radius: 16px;
+    --card-padding: 32px;
+}
+
+/* Base Professional Card */
+.feature-card {
+    background: #ffffff !important;
+    border-radius: var(--card-border-radius) !important;
+    padding: var(--card-padding) !important;
+    box-shadow: var(--card-shadow-md) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin-bottom: 24px !important;
+}
+
+/* Professional Card Hover Effects */
+.feature-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: var(--card-shadow-xl) !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Professional Card Typography */
+.feature-card h3 {
+    font-size: 1.375rem !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    margin-bottom: 16px !important;
+    color: #1f2937 !important;
+    letter-spacing: -0.025em !important;
+}
+
+.feature-card p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: #6b7280 !important;
+    margin-bottom: 0 !important;
+    font-weight: 400 !important;
+}
+
+/* Professional Icon Design */
+.feature-icon {
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.75rem !important;
+    margin-bottom: 24px !important;
+    position: relative !important;
+    transition: all 0.3s ease !important;
+    box-shadow: var(--card-shadow-sm) !important;
+}
+
+/* Professional Colored Cards */
+.card-purple {
+    background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    position: relative !important;
+}
+
+.card-purple::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%) !important;
+    pointer-events: none !important;
+}
+
+.card-purple h3,
+.card-purple p {
+    color: #ffffff !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.card-purple .feature-icon {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.card-dark-blue {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    position: relative !important;
+}
+
+.card-dark-blue::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%) !important;
+    pointer-events: none !important;
+}
+
+.card-dark-blue h3,
+.card-dark-blue p {
+    color: #ffffff !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.card-dark-blue .feature-icon {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.card-light-blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    position: relative !important;
+}
+
+.card-light-blue::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%) !important;
+    pointer-events: none !important;
+}
+
+.card-light-blue h3,
+.card-light-blue p {
+    color: #ffffff !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.card-light-blue .feature-icon {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Professional White Cards */
+.card-white {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    position: relative !important;
+}
+
+.card-white:hover {
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-white h3 {
+    color: #1f2937 !important;
+}
+
+.card-white p {
+    color: #6b7280 !important;
+}
+
+.card-white .feature-icon {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%) !important;
+    color: #1f2937 !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Enhanced Hover Effects */
+.feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg) !important;
+    box-shadow: var(--card-shadow-lg) !important;
+}
+
+.card-purple:hover .feature-icon {
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.card-dark-blue:hover .feature-icon {
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.card-light-blue:hover .feature-icon {
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.card-white:hover .feature-icon {
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%) !important;
+}
+
+/* Professional Card Grid */
+.grid {
+    gap: 32px !important;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* Responsive Professional Cards */
+@media (max-width: 1024px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .feature-card {
+        padding: 24px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .feature-icon {
+        width: 56px !important;
+        height: 56px !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.25rem !important;
+    }
+}
+
+/* Professional Card Animations */
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card {
+    animation: cardFadeIn 0.6s ease-out !important;
+}
+
+.feature-card:nth-child(2) {
+    animation-delay: 0.1s !important;
+}
+
+.feature-card:nth-child(3) {
+    animation-delay: 0.2s !important;
+}
+
+.feature-card:nth-child(4) {
+    animation-delay: 0.3s !important;
+}
+
+.feature-card:nth-child(5) {
+    animation-delay: 0.4s !important;
+}
+
+.feature-card:nth-child(6) {
+    animation-delay: 0.5s !important;
+}
+
+/* Professional Card Subtle Details */
+.feature-card::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent) !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.6s ease !important;
+}
+
+.feature-card:hover::after {
+    transform: translateX(100%) !important;
+}
+
+/* Card Purple Accent */
+.card-purple::after {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent) !important;
+}
+
+/* Card Dark Blue Accent */
+.card-dark-blue::after {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent) !important;
+}
+
+/* Card Light Blue Accent */
+.card-light-blue::after {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent) !important;
+}
+
+/* Card White Accent */
+.card-white::after {
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent) !important;
+}

@@ -63,7 +63,12 @@
         {!! seo_structured_data('organization') !!}
         </script>
 
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link href="{{ asset('app-styles.css') }}" rel="stylesheet">
+        <link href="{{ asset('grey-background-theme.css') }}" rel="stylesheet">
+        <link href="{{ asset('professional-cards.css') }}" rel="stylesheet">
+        <link href="{{ asset('card-visibility-fix.css') }}" rel="stylesheet">
+        {{-- Temporarily disabled Vite while fixing dependency issues --}}
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <style>
             @keyframes gradientMove {

@@ -9,9 +9,16 @@
 ])
 
 <span {{ $attributes->merge(['class' => 'inline-flex items-center gap-3']) }}>
-    <span class="inline-flex {{ $badgeSize }} items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary {{ $badgeTextSize }} font-bold text-primary-foreground shadow-lg shadow-primary/25">
-        SPH
-    </span>
+    {{-- Premium Logo Icon --}}
+    @if($compact)
+        <img src="{{ asset('images/logo-compact.svg') }}" 
+             alt="Smart Project Hub" 
+             class="{{ $badgeSize }} transition-transform duration-200 hover:scale-105">
+    @else
+        <img src="{{ asset('images/logo.svg') }}" 
+             alt="Smart Project Hub" 
+             class="h-10 w-auto transition-transform duration-200 hover:scale-105">
+    @endif
 
     @unless($compact)
         <span class="flex flex-col leading-tight">

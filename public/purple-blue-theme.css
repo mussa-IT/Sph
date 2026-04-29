@@ -1,0 +1,91 @@
+/* Purple, Blue & Dark Blue Theme Override - Direct Fix */
+:root {
+    --purple: #7c3aed;
+    --blue: #2563eb;
+    --dark-blue: #1e40af;
+    --purple-bright: #8b5cf6;
+    --blue-bright: #3b82f6;
+    --indigo: #6366f1;
+}
+
+/* Force override ALL violet/cyan colors with purple/blue */
+[class*="violet-"] {
+    color: var(--purple) !important;
+    background-color: var(--purple) !important;
+    border-color: var(--purple) !important;
+}
+
+[class*="blue-"] {
+    color: var(--blue) !important;
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+}
+
+[class*="cyan-"] {
+    color: var(--dark-blue) !important;
+    background-color: var(--dark-blue) !important;
+    border-color: var(--dark-blue) !important;
+}
+
+/* Specific gradient overrides */
+.from-violet-600 { --tw-gradient-from: #7c3aed !important; }
+.via-blue-500 { --tw-gradient-stops: #7c3aed, #2563eb, #1e40af !important; }
+.to-cyan-400 { --tw-gradient-to: #1e40af !important; }
+
+.from-violet-500 { --tw-gradient-from: #8b5cf6 !important; }
+.via-blue-400 { --tw-gradient-stops: #8b5cf6, #3b82f6, #6366f1 !important; }
+.to-cyan-300 { --tw-gradient-to: #6366f1 !important; }
+
+/* Background color overrides */
+.bg-violet-600\/25 { background-color: rgba(124, 58, 237, 0.25) !important; }
+.bg-blue-600\/20 { background-color: rgba(37, 99, 235, 0.20) !important; }
+.bg-cyan-500\/25 { background-color: rgba(30, 64, 175, 0.25) !important; }
+
+.bg-violet-500\/20 { background-color: rgba(139, 92, 246, 0.20) !important; }
+.bg-blue-500\/15 { background-color: rgba(59, 130, 246, 0.15) !important; }
+.bg-cyan-400\/20 { background-color: rgba(99, 102, 241, 0.20) !important; }
+
+/* Text color overrides */
+.text-violet-600 { color: #7c3aed !important; }
+.text-blue-500 { color: #2563eb !important; }
+.text-cyan-400 { color: #1e40af !important; }
+
+.text-violet-500 { color: #8b5cf6 !important; }
+.text-blue-400 { color: #3b82f6 !important; }
+.text-cyan-300 { color: #6366f1 !important; }
+
+/* Dark mode overrides */
+.dark .from-violet-500 { --tw-gradient-from: #8b5cf6 !important; }
+.dark .via-blue-400 { --tw-gradient-stops: #8b5cf6, #3b82f6, #6366f1 !important; }
+.dark .to-cyan-300 { --tw-gradient-to: #6366f1 !important; }
+
+.dark .text-violet-600 { color: #8b5cf6 !important; }
+.dark .text-blue-500 { color: #3b82f6 !important; }
+.dark .text-cyan-400 { color: #6366f1 !important; }
+
+/* Button fixes */
+.btn-gradient {
+    background: linear-gradient(135deg, #7c3aed 0%, #6366f1 35%, #2563eb 70%, #1e40af 100%) !important;
+    color: white !important;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 35%, #1d4ed8 70%, #1e40af 100%) !important;
+}
+
+/* Radial gradient fixes */
+.bg-\[radial-gradient\(circle_at_top_right\,_rgba\(139\,92\,246\,0\.2\)\,_transparent_50\%\)\] {
+    background-image: radial-gradient(circle at top right, rgba(124, 58, 237, 0.3), transparent 50%) !important;
+}
+
+.bg-\[radial-gradient\(circle_at_bottom_left\,_rgba\(59\,130\,246\,0\.2\)\,_transparent_50\%\)\] {
+    background-image: radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.3), transparent 50%) !important;
+}
+
+.dark .bg-\[radial-gradient\(circle_at_top_right\,_rgba\(139\,92\,246\,0\.2\)\,_transparent_50\%\)\] {
+    background-image: radial-gradient(circle at top right, rgba(139, 92, 246, 0.4), transparent 50%) !important;
+}
+
+.dark .bg-\[radial-gradient\(circle_at_bottom_left\,_rgba\(59\,130\,246\,0\.2\)\,_transparent_50\%\)\] {
+    background-image: radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.4), transparent 50%) !important;
+}
