@@ -1,0 +1,75 @@
+/* Smart Project Hub - CSS Variables */
+:root {
+    /* Primary Colors - Purple & Blue Theme */
+    --primary-50: #faf5ff;
+    --primary-100: #f3e8ff;
+    --primary-200: #e9d5ff;
+    --primary-300: #d8b4fe;
+    --primary-400: #c084fc;
+    --primary-500: #a855f7;
+    --primary-600: #9333ea;
+    --primary-700: #7c3aed;
+    --primary-800: #6b21a8;
+    --primary-900: #581c87;
+    
+    /* Dark Blue */
+    --dark-blue-50: #eff6ff;
+    --dark-blue-100: #dbeafe;
+    --dark-blue-200: #bfdbfe;
+    --dark-blue-300: #93c5fd;
+    --dark-blue-400: #60a5fa;
+    --dark-blue-500: #3b82f6;
+    --dark-blue-600: #2563eb;
+    --dark-blue-700: #1d4ed8;
+    --dark-blue-800: #1e40af;
+    --dark-blue-900: #1e3a8a;
+    
+    /* Light Blue */
+    --light-blue-50: #f0f9ff;
+    --light-blue-100: #e0f2fe;
+    --light-blue-200: #bae6fd;
+    --light-blue-300: #7dd3fc;
+    --light-blue-400: #38bdf8;
+    --light-blue-500: #0ea5e9;
+    --light-blue-600: #0284c7;
+    --light-blue-700: #0369a1;
+    --light-blue-800: #075985;
+    --light-blue-900: #0c4a6e;
+    
+    /* Semantic Colors */
+    --success-50: #f0fdf4;
+    --success-500: #22c55e;
+    --success-600: #16a34a;
+    --warning-50: #fffbeb;
+    --warning-500: #f59e0b;
+    --warning-600: #d97706;
+    --error-50: #fef2f2;
+    --error-500: #ef4444;
+    --error-600: #dc2626;
+    
+    /* Neutral Colors */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+    --gradient-dark-blue: linear-gradient(135deg, var(--dark-blue-600), var(--dark-blue-800));
+    --gradient-light-blue: linear-gradient(135deg, var(--light-blue-500), var(--light-blue-700));
+    --gradient-hero: linear-gradient(135deg, var(--primary-600), var(--dark-blue-600));
+}

@@ -1,0 +1,110 @@
+/* Modern Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-elevation-1);
+}
+
+.btn-primary:hover {
+    box-shadow: var(--shadow-elevation-2);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--bg-primary);
+    color: var(--neutral-700);
+    border: 1px solid var(--neutral-300);
+    box-shadow: var(--shadow-xs);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--neutral-400);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--neutral-600);
+}
+
+.btn-ghost:hover {
+    background: var(--bg-tertiary);
+    color: var(--neutral-800);
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
+}
+
+.btn-brand {
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
+}
+
+.btn-brand-muted {
+    background: transparent;
+    color: var(--neutral-600);
+    border: 1px solid var(--neutral-300);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-brand-muted:hover {
+    background: var(--neutral-50);
+    border-color: var(--neutral-400);
+}

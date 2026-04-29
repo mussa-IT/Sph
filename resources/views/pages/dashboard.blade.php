@@ -8,82 +8,40 @@
 @endphp
 
 @push('styles')
+<!-- Consolidated Professional Theme - Replaces all theme files -->
+<link href="{{ asset('consolidated-theme.css') }}" rel="stylesheet">
+<!-- CSS Variables extracted to resources/scss/variables.scss -->
+<link href="{{ asset('resources/scss/variables.scss') }}" rel="stylesheet">
+<!-- Card styles extracted to resources/scss/components/cards.scss -->
+<link href="{{ asset('resources/scss/components/cards.scss') }}" rel="stylesheet">
+<!-- Button styles extracted to resources/scss/components/buttons.scss -->
+<link href="{{ asset('resources/scss/components/buttons.scss') }}" rel="stylesheet">
+<!-- Badge and typography styles extracted to resources/scss/components/badges.scss -->
+<link href="{{ asset('resources/scss/components/badges.scss') }}" rel="stylesheet">
+<!-- Layout utilities extracted to resources/scss/layout/utilities.scss -->
+<link href="{{ asset('resources/scss/layout/utilities.scss') }}" rel="stylesheet">
 <style>
-/* Smart Project Hub - Premium SaaS Dashboard */
+/* Original CSS variables, card, button, badge, and layout styles commented out for safety
 :root {
-    /* Primary Colors - Purple & Blue Theme */
-    --primary-50: #faf5ff;
-    --primary-100: #f3e8ff;
-    --primary-200: #e9d5ff;
-    --primary-300: #d8b4fe;
-    --primary-400: #c084fc;
-    --primary-500: #a855f7;
-    --primary-600: #9333ea;
-    --primary-700: #7c3aed;
-    --primary-800: #6b21a8;
-    --primary-900: #581c87;
-    
-    /* Dark Blue */
-    --dark-blue-50: #eff6ff;
-    --dark-blue-100: #dbeafe;
-    --dark-blue-200: #bfdbfe;
-    --dark-blue-300: #93c5fd;
-    --dark-blue-400: #60a5fa;
-    --dark-blue-500: #3b82f6;
-    --dark-blue-600: #2563eb;
-    --dark-blue-700: #1d4ed8;
-    --dark-blue-800: #1e40af;
-    --dark-blue-900: #1e3a8a;
-    
-    /* Light Blue */
-    --light-blue-50: #f0f9ff;
-    --light-blue-100: #e0f2fe;
-    --light-blue-200: #bae6fd;
-    --light-blue-300: #7dd3fc;
-    --light-blue-400: #38bdf8;
-    --light-blue-500: #0ea5e9;
-    --light-blue-600: #0284c7;
-    --light-blue-700: #0369a1;
-    --light-blue-800: #075985;
-    --light-blue-900: #0c4a6e;
-    
-    /* Semantic Colors */
-    --success-50: #f0fdf4;
-    --success-500: #22c55e;
-    --success-600: #16a34a;
-    --warning-50: #fffbeb;
-    --warning-500: #f59e0b;
-    --warning-600: #d97706;
-    --error-50: #fef2f2;
-    --error-500: #ef4444;
-    --error-600: #dc2626;
-    
-    /* Neutral Colors */
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
-    
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, var(--primary-600), var(--primary-800));
-    --gradient-dark-blue: linear-gradient(135deg, var(--dark-blue-600), var(--dark-blue-800));
-    --gradient-light-blue: linear-gradient(135deg, var(--light-blue-500), var(--light-blue-700));
-    --gradient-hero: linear-gradient(135deg, var(--primary-600), var(--dark-blue-600));
+    // All CSS variables moved to resources/scss/variables.scss
 }
+
+.premium-card {
+    // All card styles moved to resources/scss/components/cards.scss
+}
+
+.btn {
+    // All button styles moved to resources/scss/components/buttons.scss
+}
+
+.badge {
+    // All badge styles moved to resources/scss/components/badges.scss
+}
+
+.container, .grid-premium {
+    // All layout utilities moved to resources/scss/layout/utilities.scss
+}
+*/
 
 /* Base Styles */
 * {
@@ -95,207 +53,6 @@ body {
     line-height: 1.6;
     color: var(--gray-900);
     background: var(--gray-50);
-}
-
-/* Premium Card Styles */
-.premium-card {
-    background: var(--bg-primary);
-    border-radius: var(--radius-2xl);
-    box-shadow: var(--shadow-card);
-    border: 1px solid var(--neutral-200);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-    position: relative;
-}
-
-.premium-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.premium-card:hover {
-    box-shadow: var(--shadow-elevation-2);
-    transform: translateY(-4px);
-    border-color: var(--neutral-300);
-}
-
-.premium-card:hover::before {
-    opacity: 1;
-}
-
-.premium-card-glass {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Modern Button Styles */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--radius-lg);
-    font-weight: 600;
-    font-size: 0.875rem;
-    line-height: 1;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    border: none;
-    outline: none;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.6s ease;
-}
-
-.btn:hover::before {
-    left: 100%;
-}
-
-.btn-primary {
-    background: var(--gradient-primary);
-    color: white;
-    box-shadow: var(--shadow-elevation-1);
-}
-
-.btn-primary:hover {
-    box-shadow: var(--shadow-elevation-2);
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background: var(--bg-primary);
-    color: var(--neutral-700);
-    border: 1px solid var(--neutral-300);
-    box-shadow: var(--shadow-xs);
-}
-
-.btn-secondary:hover {
-    background: var(--bg-tertiary);
-    border-color: var(--neutral-400);
-    box-shadow: var(--shadow-sm);
-}
-
-.btn-ghost {
-    background: transparent;
-    color: var(--neutral-600);
-}
-
-.btn-ghost:hover {
-    background: var(--bg-tertiary);
-    color: var(--neutral-800);
-}
-
-/* Modern Badge Styles */
-.badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-    padding: 0.375rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1;
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
-}
-
-.badge-success {
-    background: var(--success-50);
-    color: var(--success-700);
-    border-color: var(--success-200);
-}
-
-.badge-warning {
-    background: var(--warning-50);
-    color: var(--warning-700);
-    border-color: var(--warning-200);
-}
-
-.badge-error {
-    background: #fef2f2;
-    color: #dc2626;
-    border-color: #fecaca;
-}
-
-.badge-primary {
-    background: var(--primary-50);
-    color: var(--primary-700);
-    border-color: var(--primary-200);
-}
-
-.badge:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-sm);
-}
-
-/* Typography Styles */
-.text-display {
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: -0.025em;
-    color: var(--neutral-900);
-}
-
-.text-heading {
-    font-size: 2.25rem;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: -0.025em;
-    color: var(--neutral-900);
-}
-
-.text-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.4;
-    color: var(--neutral-800);
-}
-
-.text-body {
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--neutral-600);
-}
-
-.text-caption {
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1.4;
-    color: var(--neutral-500);
-}
-
-/* Layout Utilities */
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 var(--space-6);
-}
-
-.grid-premium {
-    display: grid;
-    gap: var(--space-6);
 }
 
 .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
@@ -1382,18 +1139,14 @@ body {
 <!-- Premium Dashboard JavaScript -->
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all charts with premium styling
-    initializeCharts();
-    
-    // Add interactive features
-    addInteractiveFeatures();
-    
-    // Initialize animations
-    initializeAnimations();
-});
+<!-- Dashboard JavaScript Module (New) -->
+<script src="{{ asset('resources/js/dashboard.js') }}"></script>
 
+<!-- Original JavaScript kept as fallback for safety -->
+<script>
+/* 
+// Original JavaScript commented out - moved to resources/js/dashboard.js
+// If new module fails, uncomment this section as fallback
 function initializeCharts() {
     // Chart.js premium color scheme
     const chartColors = {
@@ -1732,6 +1485,7 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+*/
 </script>
 @endpush
 
