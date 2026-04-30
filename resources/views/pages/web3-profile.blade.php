@@ -98,7 +98,7 @@
                             <span class="inline-flex px-2 py-1 rounded-full text-xs font-medium
                                 @if($badge['rarity'] === 'rare') bg-warning/10 text-warning
                                 @elseif($badge['rarity'] === 'epic') bg-danger/10 text-danger
-                                @else bg-info/10 text-info
+                                @else bg-info/10 text-info @endif
                                 ">
                                 {{ ucfirst($badge['rarity']) }}
                             </span>

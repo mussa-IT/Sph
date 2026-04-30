@@ -331,6 +331,10 @@ Route::middleware('auth')->group(function () {
         });
     });
 
+    Route::post('/projects/{project}/tasks', [App\Http\Controllers\TaskController::class, 'store'])->name('projects.tasks.store');
+
+    Route::resource('tasks', TaskController::class);
+
     // Revenue Routes (Admin Only)
     Route::prefix('revenue')->name('revenue.')->middleware('admin')->group(function () {
         Route::get('/', [RevenueController::class, 'index'])->name('index');

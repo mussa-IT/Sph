@@ -132,4 +132,22 @@ class Project extends Model
         // Only owner can delete
         return $this->user_id === $user->id;
     }
+
+    /**
+     * Hakikisha deadline ni Carbon object kila mara, hata kama imehifadhiwa kama string.
+     */
+    public function getDeadlineAttribute($value): ?\Carbon\Carbon
+    {
+        if (empty($value)) {
+            return null;
+        }
+
+        // Tayari ni Carbon? Rudisha tu
+        if ($value instanceof \Carbon\Carbon) {
+            return $value;
+        }
+
+        // Badilisha kutoka string tarehe
+        return \Carbon\Carbon::parse($value);
+    }
 }

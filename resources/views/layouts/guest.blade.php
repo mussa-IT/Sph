@@ -35,17 +35,7 @@
         <style>body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }</style>
     </head>
     <body>
-        <div class="auth-card">
-            <span class="auth-badge">Smart Project Hub</span>
-            <h2 class="auth-title">@yield('heading')</h2>
-            <p class="auth-subtitle">@yield('subtitle', 'Enter your credentials to access your account')</p>
-
-            @yield('content')
-
-            <p class="auth-footer">
-                Compatible with Gmail, Outlook Web, LinkedIn and most web editors for a smooth project management experience anywhere online.
-            </p>
-        </div>
+        @yield('content')
 
         <script>
             // Initialize dark mode on page load for guest pages

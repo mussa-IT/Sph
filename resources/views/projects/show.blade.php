@@ -27,9 +27,24 @@
 
                 <div class="flex flex-wrap items-center gap-3">
                     <x-status-badge :status="$project->status" />
+                    @can('update', $project)
                     <a href="{{ route('projects.edit', $project) }}" class="inline-flex items-center gap-2 rounded-xl border border-muted/20 bg-background px-4 py-2 text-sm font-medium text-foreground dark:bg-background-dark dark:text-foreground-dark hover:bg-muted/10 transition">
                         Edit Project
                     </a>
+                    @endcan
+                    
+                    @can('delete', $project)
+                    <form method="POST" action="{{ route('projects.destroy', $project) }}" onsubmit="return confirm('Are you sure you want to delete this project?')" class="inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="inline-flex items-center gap-2 rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20 px-4 py-2 text-sm font-medium text-red-700 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/30 transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                            </svg>
+                            Delete Project
+                        </button>
+                    </form>
+                    @endcan
                 </div>
             </div>
 
@@ -40,7 +55,13 @@
                 </div>
                 <div class="rounded-3xl bg-muted/5 p-4 dark:bg-muted-dark/5">
                     <p class="text-xs uppercase tracking-[.28em] text-muted dark:text-muted-dark">Deadline</p>
-                    <p class="mt-2 text-lg font-semibold text-foreground dark:text-foreground-dark">{{ $project->deadline?->format('M j, Y') ?? 'No deadline' }}</p>
+                    <p class="mt-2 text-lg font-semibold text-foreground dark:text-foreground-dark">
+    @if($project->deadline)
+        {{ $project->deadline->format('M j, Y') }}
+    @else
+        No deadline
+    @endif
+</p>
                 </div>
                 <div class="rounded-3xl bg-muted/5 p-4 dark:bg-muted-dark/5">
                     <p class="text-xs uppercase tracking-[.28em] text-muted dark:text-muted-dark">Budget</p>
@@ -59,7 +80,7 @@
             <div class="rounded-[2rem] bg-white dark:bg-background-dark border border-muted/10 p-6 shadow-sm">
                 <h2 class="text-lg font-semibold text-foreground dark:text-foreground-dark">Add New Task</h2>
                 <p class="text-sm text-muted mt-1">Keep project progress moving by adding tasks and due dates.</p>
-                <form action="{{ route('projects.tasks.store', $project) }}" method="POST" class="mt-6 space-y-4">
+                <form action="{{ url('/projects/'.$project->id.'/tasks') }}" method="POST" class="mt-6 space-y-4">
                     @csrf
                     <div class="grid gap-4 md:grid-cols-4">
                         <div class="md:col-span-2">
@@ -180,7 +201,7 @@
                     </div>
                     <div class="rounded-3xl bg-muted/5 p-4 dark:bg-muted-dark/5">
                         <p class="text-xs uppercase tracking-[.28em] text-muted dark:text-muted-dark">Deadline</p>
-                        <p class="mt-2 text-lg font-semibold text-foreground dark:text-foreground-dark">{{ $project->deadline?->format('M j, Y') ?? 'Not scheduled' }}</p>
+                        <p class="mt-2 text-lg font-semibold text-foreground dark:text-foreground-dark">{{ $project->deadline ? $project->deadline->format('M j, Y') : 'Not scheduled' }}</p>
                     </div>
                     <div class="rounded-3xl bg-muted/5 p-4 dark:bg-muted-dark/5">
                         <p class="text-xs uppercase tracking-[.28em] text-muted dark:text-muted-dark">Estimated Budget</p>
@@ -203,4 +224,14 @@
         </aside>
     </div>
 </div>
+<!-- Create New Project Button -->
+        <div class="mt-8 text-center">
+            <a href="{{ route('projects.create') }}" class="inline-flex items-center gap-2 rounded-xl border border-primary/20 bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary/90 transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Create New Project
+            </a>
+        </div>
+    </div>
 @endsection

@@ -4,9 +4,9 @@
     'pagination' => false,
 ])
 
-<div {{ $attributes->merge(['class' => 'w-full rounded-3xl border border-muted/10 bg-background-secondary shadow-sm overflow-hidden ' . $class]) }}>
+<div {{ $attributes->merge(['class' => 'bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden ' . $class]) }}>
     @if($search)
-        <div class="px-4 py-4 sm:px-5 sm:py-5 border-b border-muted/10 bg-background dark:bg-background-dark">
+        <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div class="min-w-0 flex-1">
                     {{ $search }}
@@ -15,25 +15,25 @@
         </div>
     @endif
 
-    <div class="hidden md:block overflow-x-auto">
-        <table class="min-w-full w-full border-separate border-spacing-0">
-            <thead class="bg-muted/5 dark:bg-muted-dark/5 text-left text-xs uppercase tracking-wider text-muted">
+    <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <thead class="bg-gray-50 dark:bg-gray-900/50">
                 {{ $header }}
             </thead>
-            <tbody class="divide-y divide-muted/10 bg-background-secondary">
+            <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                 {{ $rows }}
             </tbody>
         </table>
     </div>
 
     @if(isset($cards) && $cards->isNotEmpty())
-        <div class="md:hidden px-4 py-4 sm:px-5 sm:py-5 space-y-4 bg-background dark:bg-background-dark">
+        <div class="md:hidden px-6 py-4 space-y-4 bg-gray-50 dark:bg-gray-900/50">
             {{ $cards }}
         </div>
     @endif
 
     @if($pagination)
-        <div class="px-4 py-4 sm:px-5 sm:py-5 border-t border-muted/10 bg-background dark:bg-background-dark">
+        <div class="px-6 py-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
             {{ $pagination }}
         </div>
     @endif
